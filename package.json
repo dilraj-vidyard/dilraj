@@ -1,0 +1,7 @@
+{
+  "name": "dilraj",
+  "version": "1.0.0",
+  "bin": {
+    "dilraj": "index.js"
+  }
+}
