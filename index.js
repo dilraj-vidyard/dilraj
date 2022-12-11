@@ -1,5 +1,11 @@
 #!/usr/bin/env node
-console.log(`Dilraj Singh
+
+const clearConsole = require('clear-any-console')
+
+// Clears the console.
+clearConsole();
+
+console.log(`Dilraj Singh ZZZZZ
 
 Software Developer at Vidyard
 

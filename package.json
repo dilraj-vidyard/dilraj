@@ -1,7 +1,10 @@
 {
   "name": "dilraj",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "dilraj": "index.js"
+  },
+  "dependencies": {
+    "clear-any-console": "^1.16.2"
   }
 }
