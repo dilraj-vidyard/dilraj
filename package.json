@@ -7,5 +7,9 @@
   "description": "Get to know Dilraj via `npx dilraj`.",
   "dependencies": {
     "cli-welcome": "^2.2.2"
-  }
+  },
+  "keywords": [
+    "dilraj",
+    "developer-tools"
+  ]
 }
