@@ -1,7 +1,14 @@
 #!/usr/bin/env node
 
+const packageJson = require('./package.json');
 const welcome = require('cli-welcome');
-const packageJson = require('./package.json')
+const chalk = require('chalk');
+
+// Chalk Styles
+const twitterStyle = chalk.hex('#1DA1F2').bold.inverse;
+const githubStyle = chalk.black.bold.inverse;
+const dimStyle = chalk.dim;
+const bestFriendStyle = chalk.green.bold.inverse;
 
 welcome({
   title: packageJson.name,
@@ -13,14 +20,12 @@ welcome({
   clear: false,
 })
 
-console.log(`Dilraj Singh
-
-Software Developer at Vidyard
-
+console.log(`
+${dimStyle(
+  `Software Developer at Vidyard
 The number ⭐️ one most impactful developer of our generation.
-
-👨‍💻 GitHub: https://github.com/dsomel21
-🐦 Twitter: https://twitter.com/dilrajio
-🫂  Best Friend at Vidyard: Matt Cook
-
-`)
+`)}
+🐦 ${twitterStyle('Twitter')}: ${dimStyle(`https://twitter.com/dilrajio`)}
+👨‍💻 ${githubStyle('GitHub')}: ${dimStyle(`https://github.com/dsomel21`)}
+🫂  ${bestFriendStyle('Best Friend at Vidyard')}: ${dimStyle(`Matt Cook`)}
+  `)
