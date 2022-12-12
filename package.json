@@ -4,7 +4,8 @@
   "bin": {
     "dilraj": "index.js"
   },
+  "description": "Get to know Dilraj via `npx dilraj`.",
   "dependencies": {
-    "clear-any-console": "^1.16.2"
+    "cli-welcome": "^2.2.2"
   }
 }
