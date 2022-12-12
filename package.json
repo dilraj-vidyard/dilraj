@@ -11,5 +11,12 @@
   "keywords": [
     "dilraj",
     "developer-tools"
-  ]
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "dilraj-vidyard/dilraj",
+  "author": {
+    "name": "Dilraj Singh",
+    "email": "dilraj.singh@vidyard.com"
+  }
 }
