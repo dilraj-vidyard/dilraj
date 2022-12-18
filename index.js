@@ -1,31 +1,28 @@
 #!/usr/bin/env node
+import alert from 'cli-alerts';
+import handleError from 'cli-handle-error';
 
-const packageJson = require('./package.json');
-const welcome = require('cli-welcome');
-const chalk = require('chalk');
+import init from './utils/init.js';
+import { social, bio } from './utils/data.js';
+import cli from './utils/cli.js';
+const { flags, input } = cli;
+import debug from './utils/debug.js';
 
-// Chalk Styles
-const twitterStyle = chalk.hex('#1DA1F2').bold.inverse;
-const githubStyle = chalk.black.bold.inverse;
-const dimStyle = chalk.dim;
-const bestFriendStyle = chalk.green.bold.inverse;
+(async () => {
+  init();
+  console.log(bio);
 
-welcome({
-  title: packageJson.name,
-  description: packageJson.description,
-  version: packageJson.version,
-  bgColor: '#FADC00',
-  color: '#000000',
-  bold: true,
-  clear: false,
-})
+  if (flags.social) console.log(social);
+  if (flags.ad) alert({ type: 'info', msg: 'Ad: Check out SPG!' });
 
-console.log(`
-${dimStyle(
-  `Software Developer at Vidyard
-The number ⭐️ one most impactful developer of our generation.
-`)}
-🐦 ${twitterStyle('Twitter')}: ${dimStyle(`https://twitter.com/dilrajio`)}
-👨‍💻 ${githubStyle('GitHub')}: ${dimStyle(`https://github.com/dsomel21`)}
-🫂  ${bestFriendStyle('Best Friend at Vidyard')}: ${dimStyle(`Matt Cook`)}
-  `)
+  if (flags.debug) {
+    debug(cli);
+  }
+})();
+
+// console.log(`
+// ${logSymbols.success} ${success('SUCCESS')}: Thank you for checking out the CLI.
+// ${logSymbols.info} ${info('INFO')}: Your installation was successful.
+// ${logSymbols.error} ${error('ERROR')}: There was an issue cloning the DevTools repository.
+// ${logSymbols.warning} ${warning('WARNING')}: This command is still in beta. If you see anything wrong, please create an issue.
+// `)
